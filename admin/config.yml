@@ -2,12 +2,37 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-# Uncomment below to enable drafts
-# publish_mode: editorial_workflow
+# Uncomment below to enable drafts -> this creates branches & pull requests
+publish_mode: editorial_workflow
 
-media_folder: "static/img" # Media files will be stored in the repo under images/uploads
+media_folder: "static/media" # Media files will be stored in the repo under images/uploads
+
+logo_url: "static/images/logo.svg"
 
 collections:
+
+  # Publications -> articles, papers, books, tech writing
+  - name: "writing"
+    identifier_field: "name" # this is the part of the data for the unique title (defaults to title)
+    label: "Writings"
+    label_singular: "Writing"
+    description: "Any articles, publications, books(!), tech writing etc..."
+    folder: "writings"
+    slug: "{{name}}"
+    fields:
+      - label: "Name"
+        name: "name"
+        widget: "string"
+      # default
+      # required
+      # pattern
+      - { label: "Release Date", name: "releaseDate", widget: "datetime", format: "Do MMM, YYYY" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Publisher", name: "publisher", widget: "string" }
+      - { label: "Link", name: "website", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
   # Our blog posts
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
