@@ -31,8 +31,8 @@ collections:
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Publisher", name: "publisher", widget: "string" }
       - { label: "Link", name: "website", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # Our blog posts
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
