@@ -28,12 +28,11 @@ images:
 videos: null
 
 tech:
-	- nodejs
-	- express
-	- sass
-	- server
-	- css preprocessor
-	- html templating
+  - express
+  - nodejs
+  - server
+  - css preprocessor
+  - html templating
 
 tags:
   - website
