@@ -34,6 +34,29 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
+  # Publications -> articles, papers, books, tech writing
+  - name: "projects"
+    identifier_field: "name" # this is the part of the data for the unique title (defaults to title)
+    label: "Writings"
+    label_singular: "Writing"
+    description: "Any articles, publications, books(!), tech writing etc..."
+    folder: "writings"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - label: "Name"
+        name: "name"
+        widget: "string"
+      # default
+      # required
+      # pattern
+      - { label: "Release Date", name: "releaseDate", widget: "datetime", format: "Do MMM, YYYY" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Publisher", name: "publisher", widget: "string" }
+      - { label: "Link", name: "website", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
   # Our blog posts
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
