@@ -7,6 +7,14 @@ publish_mode: editorial_workflow
 
 media_folder: "static/media" # Media files will be stored in the repo under images/uploads
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: rumyra
+    api_key: 871382599576712
+    folder:
+      - path: portfolio
+
 logo_url: "static/images/logo.svg"
 
 collections:
@@ -36,25 +44,56 @@ collections:
 
   # Publications -> articles, papers, books, tech writing
   - name: "projects"
-    identifier_field: "name" # this is the part of the data for the unique title (defaults to title)
-    label: "Writings"
-    label_singular: "Writing"
-    description: "Any articles, publications, books(!), tech writing etc..."
-    folder: "writings"
+    identifier_field: "title" # this is the part of the data for the unique title (defaults to title)
+    label: "Projects"
+    label_singular: "Project"
+    description: "All work projects, demos, personal art projects, community builds"
+    folder: "projects"
     create: true
-    slug: "{{name}}"
+    slug: "{{title}}"
     fields:
-      - label: "Name"
-        name: "name"
+      - label: "Title"
+        name: "title"
         widget: "string"
       # default
       # required
       # pattern
-      - { label: "Release Date", name: "releaseDate", widget: "datetime", format: "Do MMM, YYYY" }
+      - { label: "Collection", name: "collection", widget: "select", options: ["Work", "Demo", "Personal", "Community", "Art"]}
       - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Publisher", name: "publisher", widget: "string" }
-      - { label: "Link", name: "website", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", default: true }
+
+      - {label: "Link", name: "url", widget: "string"}
+      - {label: "Github", name: "github", widget: "string"}
+
+      - { label: "Client (name)", name: "client", widget: "string", required: false}
+      - { label: "Client URL", name: "client_url", widget: "string", required: false}
+
+      - {label: "Location", name: "location", widget: "map" }
+
+      - { label: "Date From", name: "date_from", widget: "datetime", format: "Do MMM, YYYY" }
+      - { label: "Date To", name: "date_to", widget: "datetime", format: "Do MMM, YYYY", required: false}
+
+      - label: "Media"
+        name: "media"
+        widget: "file"
+        media_library:
+          config:
+            multiple: true
+
+      - label: "Quote"
+        name: "quote"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Quote Text", name: "q", widget: "string"}
+          - {label: "Cite", name: "cite", widget: "string"}
+          - {label: "Link", name: "link", widget: "string"}
+
+      - label: "Tech Used"
+        name: "tech"
+        widget: "list"
+        default: ["express", "nodejs", "heroku", "SCSS", "pug"]
+
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   # Our blog posts
@@ -69,6 +108,7 @@ collections:
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
       - { label: "Body", name: "body", widget: "markdown" }
+
   # Our pages e.g. About
   - name: "pages"
     label: "Page"

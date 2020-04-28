@@ -20,12 +20,12 @@
   "homepage": "https://ruthjohn.com",
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
-    "luxon": "^1.21.1",
+    "luxon": "^1.23.0",
     "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^5.2.5"
+    "markdown-it-anchor": "^5.2.7"
   },
   "dependencies": {
-    "clean-css": "^4.2.1",
+    "clean-css": "^4.2.3",
     "html-minifier": "^4.0.0",
     "uglify-es": "^3.3.9"
   }
