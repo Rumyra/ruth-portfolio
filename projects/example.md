@@ -14,10 +14,10 @@ media:
   - https://res.cloudinary.com/rumyra/image/upload/v1488918472/portfolio/gxqwu5wec424babmdwvy.jpg
   - https://res.cloudinary.com/rumyra/image/upload/v1488918472/portfolio/luizomjxtgrqsaeqncyt.jpg
 quote:
-  - q: A very fun <a href="https://twitter.com/sheffield_js">@sheffield_js</a>  with
+  q: A very fun <a href="https://twitter.com/sheffield_js">@sheffield_js</a>  with
       <a href="https://twitter.com/Rumyra">@Rumyra</a>  tonight.
-    cite: Amy Benson (@amyvbenson)
-    link: https://twitter.com/amyvbenson/status/936384517614563328
+  cite: Amy Benson (@amyvbenson)
+  link: https://twitter.com/amyvbenson/status/936384517614563328
 tech:
   - express
   - nodejs
