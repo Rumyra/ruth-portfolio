@@ -1,18 +1,19 @@
 ---
-title: An example project
+title: Stupid Cities
 collection: Work
-summary: A one sentence sum up of the project
+summary: An app to help those with mobility issues, log those problems in their
+  city (or other public space)
 featured: true
-url: http://halfstackconf.com/
-github: https://github.com
-client: Halfstack
-client_url: http://halfstackconf.com/
-location: '{"type":"Point","coordinates":[-0.0824899,51.4956544]}'
-date_from: 6th Dec, 2015
-date_to: 13th Jan, 2016
+url: https://stupidcities.com/
+github: "null"
+client: Little Lost Robot
+client_url: ""
+location: '{"type":"Point","coordinates":[-2.365389,51.383176]}'
+date_from: 24th Feb, 2020
+date_to: 27th Mar, 2020
 media:
-  - https://res.cloudinary.com/rumyra/image/upload/v1488918472/portfolio/gxqwu5wec424babmdwvy.jpg
-  - https://res.cloudinary.com/rumyra/image/upload/v1488918472/portfolio/luizomjxtgrqsaeqncyt.jpg
+  - https://res.cloudinary.com/rumyra/image/upload/v1588777394/portfolio/stupid2.png
+  - https://res.cloudinary.com/rumyra/image/upload/v1588777337/portfolio/stupid1.png
 quote:
   q: A very fun <a href="https://twitter.com/sheffield_js">@sheffield_js</a>  with
       <a href="https://twitter.com/Rumyra">@Rumyra</a>  tonight.
@@ -21,9 +22,13 @@ quote:
 tech:
   - express
   - nodejs
-  - server
-  - css preprocessor
-  - html templating
+  - pug
+  - css
+  - html
+  - javascript
 ---
+I was tasked to extend a prototype app, to allow users to add 'micro aggressions' to a map of their space, where they find it frustrating to move through and about. The data is collated for the over-arching project.
 
-Who why what where when how
+From the website: Public spaces and their design plays a key part in how we engage and move through society. We are interested in the tension between the public space and the individual and how we can find new ways of seeing our cities.
+
+Part street art, placemaking, hardware hacking and advocacy, our goal is to improve the social equality of our cities by challenging their current design. Making visible the invisible micro-aggressions of unaccessible design and behaviour
